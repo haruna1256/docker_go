@@ -1,0 +1,13 @@
+services:
+  go-app:
+    build:
+      context: ./work/
+      dockerfile: Dockerfile
+    # image: go-app
+    container_name: go-app
+    ports:
+      - 8000:8000
+    tty: true
+    volumes:
+      - ./work:/work
+      
