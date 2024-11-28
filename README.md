@@ -51,7 +51,11 @@ dockersv/
 - http://localhost:8081でアクセス可能
 
 #### ディレクトリの中に入る
-```docker exec -it go-app sh```
+```
+docker exec -it go-app sh
+```
 
 ### 実行
-```/work # go run main.go```
+```
+/work # go run main.go
+```
