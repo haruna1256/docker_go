@@ -11,7 +11,7 @@ func main() {
 	// 点数の判定
     index := judge_point(score)
 	// 結果を表示する関数
-	result(name,index,result)
+	result_view(name,index,result)
 
 }
 
@@ -23,6 +23,9 @@ func result_data() []string {
 
 // データ入力する関数
 func input_data() (string, int) {
+	var name string
+	var score int
+
 	// 名前を入力する
 	fmt.Print("名前:")
 	fmt.Scanf("%s", &name)	
@@ -36,10 +39,12 @@ func input_data() (string, int) {
 
 // 点数を判定する関数
 func judge_point(score int) int {
+	// 配列
+	var index int
 	// 入力された点数が数字かどうかを確認する
 	if score < 0 || score > 100 {
 		fmt.Println("点数は0〜100までの数字を入力してください")
-		return
+		return 0
 	}
 
 	// 点数を判定する
@@ -58,7 +63,7 @@ func judge_point(score int) int {
 
 
 // 結果を表示する関数
-func result(name string, index int, result []string) {
+func result_view(name string, index int, result []string) {
 	// 結果を表示する
 	fmt.Println(name,"さん")
 	fmt.Println(result[index])
