@@ -6,18 +6,19 @@ import "fmt"
 
 func main() {
 	// 点数によって表示する結果を配列に代入する
-	result := []string{"NG", "Good", "Very Good", "Excellent"}
+	result := []string{"NG", "Good!", "Very Good!", "Excellent!"}
 	// 結果を表示する配列の場所を指定する変数
 	var index int
+	// 名前、点数を入力する変数
+	var name string
+	var score int
 
 	// 名前を入力する
 	fmt.Print("名前:")
-	var name string
-	fmt.Scanf("%s", &name)	// 入力された文字をうnameに代入
+	fmt.Scanf("%s", &name)	// 入力された文字をnameに代入
 
 	// 点数を入力する
 	fmt.Print("点数:")
-	var score int
 	fmt.Scanf("%d", &score)	// 入力された数字をscoreに代入
 
 	// 入力された点数が数字かどうかを確認する
@@ -38,7 +39,7 @@ func main() {
 	}
 
 	// 結果を表示する
-	fmt.println(name,"さん")
-	fmt.println(result[index])
+	fmt.Println(name,"さん")
+	fmt.Println(result[index])
 
 }		
