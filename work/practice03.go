@@ -23,6 +23,7 @@ func result_data() []string {
 
 // データ入力する関数
 func input_data() (string, int) {
+	// 名前、点数の変数を定義
 	var name string
 	var score int
 
@@ -39,7 +40,7 @@ func input_data() (string, int) {
 
 // 点数を判定する関数
 func judge_point(score int) int {
-	// 配列
+	// 結果を表示する配列の場所を指定する変数
 	var index int
 	// 入力された点数が数字かどうかを確認する
 	if score < 0 || score > 100 {
