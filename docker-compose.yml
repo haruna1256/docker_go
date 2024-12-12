@@ -11,3 +11,20 @@ services:
     volumes:
       - ./work:/work
       
+  db:
+      image: mysql:8.4
+      volumes:
+      - ./db/db_data:/var/lib/mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: '123qwecc'
+        MYSQL_DATABASE: sys5db
+        MYSQL_USER: sys5user
+        MYSQL_PASSWORD: ecc
+        TZ: 'Asia/Tokyo'
+      ports:
+        - 3306:3306
+      command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+volumes:
+  db_data: {}
