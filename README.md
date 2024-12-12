@@ -38,7 +38,7 @@ dockersv/
 #### Apache・PHPの確認
 
 - htdocsフォルダにtest.phpを作成
-- [http://localhost:8080/test.phpでアクセス](http://localhost:8080/test.php%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9)
+- [http://localhost:8080/test.phpでアクセス](http://localhost:8080/test.php)
 
 #### MySQLの確認
 
@@ -58,4 +58,17 @@ docker exec -it go-app sh
 ### 実行
 ```
 /work # go run main.go
+```
+
+
+# Gin
+[ドキュメント](https://gin-gonic.com/ja/docs/)
+
+GinはGolangで書かれたWebサーバフレームワーク。<br>
+
+高速で認証などのmiddlewareをサポート。また構造的なルーティングやXMLファイルやHTMLファイルを返すことができます。
+
+#### Ginのインストール
+```
+go get -u github.com/gin-gonic/gin
 ```
