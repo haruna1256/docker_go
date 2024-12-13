@@ -17,7 +17,7 @@ type User struct {
 }
 
 func main() {
-	dsn := "root:123qwecc@tcp(db:3306)/sys5db?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:123qwecc@tcp(db:3306)/ecc_db?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
@@ -31,7 +31,7 @@ func main() {
 	router.Use(cors.Default())
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			
+
 		//Katoのageを返す
 			"age": user.Age,
 		})
